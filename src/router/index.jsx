@@ -1,11 +1,11 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import withRouter from "../components/withRouter";
+import withRouter from "@/components/withRouter";
 
 export const mainRoutes = [
   {
     path: "/home",
-    element: React.lazy(() => import("../pages/HomePage")),
+    element: React.lazy(() => import("@/pages/HomePage")),
     meta: {
       key: "Home",
     },
@@ -15,25 +15,25 @@ export const mainRoutes = [
 const notFoundPage = [
   {
     path: "/404",
-    element: React.lazy(() => import("../pages/HomePage")),
+    element: React.lazy(() => import("@/pages/HomePage")),
   },
   {
     path: "/*",
-    element: React.lazy(() => import("../pages/HomePage")),
+    element: React.lazy(() => import("@/pages/HomePage")),
   },
 ];
 
 const routes = [
   {
     path: "/user",
-    element: React.lazy(() => import("../pages/UserPage")),
+    element: React.lazy(() => import("@/pages/HomePage")),
     meta: {
       key: "UserPage",
     },
   },
   {
     path: "/",
-    element: React.lazy(() => import("../layout/index")),
+    element: React.lazy(() => import("@/layout/index")),
     children: [
       {
         path: "/",
